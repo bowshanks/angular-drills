@@ -1,7 +1,23 @@
 <html ng-app="apiApp">
-	<body>
-		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<body ng-controller="controller">
+
+		<ul ng-repeat="ship in starships | orderBy: '-length'"><strong>Ship:</strong> <i>{{ship.name}}</i>
+			<li>Model: {{ship.model}}</li>
+			<li>Manufacturer: {{ship.manufacturer}}</li>
+			<li>Length: {{ship.length}}</li>
+			<li>Max atmosphering speed: {{ship.max_atmosphering_speed}}</li>
+			<li>Crew: {{ship.crew}}</li>
+			<li>Passengers: {{ship.passengers}}</li>
+			<li>Cargo capacity: {{ship.cargo_capacity}}</li>
+			<li>Consumables: {{ship.consumables}}</li>
+			<li>Hyperdrive rating: {{ship.hyperdrive_rating}}</li>
+			<li>MGLT: {{ship.MGLT}}</li>
+			<li>Starship class: {{ship.starship_class}}</li>
+			<li>Cost in credits: {{ship.cost_in_credits}}</li>
+
+		</ul>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>

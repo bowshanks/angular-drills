@@ -1,6 +1,14 @@
-<html>
-	<body>
-		Something
+<html ng-app="app">
+	<body ng-controller="controller">
+
+		<input ng-filter="person.name">
+		<input ng-filter="person.email">
+		<input ng-filter="person.phone">
+		<ul ng-repeat="person in people | filter: person"><strong>Name:</strong> {{person.name}}
+			<li>Email: {{person.email}}</li>
+			<li>Phone: {{person.phone}}</li>
+			<li>Start Date: {{person.dateEmployed}}</li>
+		</ul>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

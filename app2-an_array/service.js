@@ -101,13 +101,10 @@ var myData = [
 	{"name": "Odysseus Nash", "email": "purus@rutrum.co.uk", "dateEmployed": "01/08/2016", "phone": "722-7908"}
 ];
 
-
-
-
-
-
-
-
-
-
-
+angular.module('arrayApp').service('arrayService',function($q,$http){
+	this.getData = function () {
+		var deferred = $q.defer();
+		deferred.resolve(myData);
+		return deferred.promise
+	}
+});

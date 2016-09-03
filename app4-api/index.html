@@ -1,6 +1,9 @@
 <html ng-app="apiApp">
-	<body>
-		
+	<body ng-controller="apiController">
+		<ul ng-repeat="bird in birds"><strong>{{bird.commonName}}</strong>
+			<li>Scientific Name: {{bird.scientificName}}</li>
+			<li>Family: {{bird.family}}</li>
+		</ul>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

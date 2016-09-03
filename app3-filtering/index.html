@@ -1,10 +1,10 @@
 <html ng-app="app">
 	<body ng-controller="controller">
 
-		<input ng-filter="person.name">
-		<input ng-filter="person.email">
-		<input ng-filter="person.phone">
-		<ul ng-repeat="person in people | filter: person"><strong>Name:</strong> {{person.name}}
+		<input placeholder="name" ng-model="personFilter.name">
+		<input placeholder="email" ng-model="personFilter.email">
+		<input placeholder="phone" ng-model="personFilter.phone">
+		<ul ng-repeat="person in people | filter: personFilter"><strong>Name:</strong> {{person.name}}
 			<li>Email: {{person.email}}</li>
 			<li>Phone: {{person.phone}}</li>
 			<li>Start Date: {{person.dateEmployed}}</li>

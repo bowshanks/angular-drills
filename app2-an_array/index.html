@@ -3,7 +3,13 @@
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
 	<body ng-controller="arrayController">
-	
+
+		<ul ng-repeat="person in myData"><strong>Name:</strong> {{person.name}}
+			<li>Email: {{person.email}}</li>
+			<li>Phone: {{person.phone}}</li>
+			<li>Start Data: {{person.dateEmployed}}</li>
+		</ul>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

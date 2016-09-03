@@ -100,3 +100,14 @@ var myData = [
 	{"name": "Amber Ball", "email": "Quisque@Aenean.ca", "dateEmployed": "08/11/2015", "phone": "651-3983"},
 	{"name": "Odysseus Nash", "email": "purus@rutrum.co.uk", "dateEmployed": "01/08/2016", "phone": "722-7908"}
 ];
+angular.module('app').service('service',function($q,$http){
+
+	this.getData =  function(){
+		var deferred = $q.defer();
+
+		deferred.resolve(myData);
+
+		return deferred.promise;
+	}
+
+});

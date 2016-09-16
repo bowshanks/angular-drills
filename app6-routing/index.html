@@ -1,9 +1,20 @@
-<html>
+<html ng-app="app">
 	<body>
+		<!-- how brett did it https://github.com/asBrettisay/symmetrical-palm-tree -->
 		<h1>app6 - routing</h1>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<ul>
+			<a ui-sref="home"><li>Home</li></a>
+			<a ui-sref="signup"><li>Sign Up</li></a>
+		</ul>
+
+		<ui-view></ui-view>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 		<script src="app.js"></script>
-		<script src="controller.js"></script>
 		<script src="service.js"></script>
+		<script src="./home/homeCtrl.js"></script>
+		<script src="./details/detailsCtrl.js"></script>
+		<script src="./signup/signupCtrl.js"></script>
 	</body>
 </html>
